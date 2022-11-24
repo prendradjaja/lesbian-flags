@@ -129,7 +129,7 @@ function renderFlag(indices) {
 
 function toIndices(word) {
   return (
-    Array.from(word)
+    Array.from(word.toLowerCase())
       .map(letter => Array.from('lesbian').indexOf(letter))
       .filter(index => index !== -1)
   );
