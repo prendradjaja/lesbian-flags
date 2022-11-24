@@ -3,13 +3,11 @@
 const $ = s => document.querySelector(s);
 
 const colors = [
-  '#d52d00',
-  '#ef7627',
-  '#ff9a56',
-  '#ffffff',
-  '#d162a4',
-  '#b55690',
-  '#a30262',
+  '#5BCEFA',
+  '#F5A9B8',
+  'white',
+  '#F5A9B8',
+  '#5BCEFA',
 ];
 
 const inputEl = $('input');
@@ -61,7 +59,7 @@ function renderFlag(indices) {
 function toIndices(word) {
   return (
     Array.from(word.toLowerCase())
-      .map(letter => Array.from('lesbian').indexOf(letter))
+      .map(letter => Array.from('trans').indexOf(letter))
       .filter(index => index !== -1)
   );
 }
