@@ -14,7 +14,6 @@ const words = [
 'lilnas',
 'nananana',
 'snail',
-'lesbians',
 
 // Pride
 'enbies',
