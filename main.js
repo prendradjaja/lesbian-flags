@@ -103,6 +103,7 @@ function main() {
 
   inputEl.addEventListener('keydown', handleInputChange);
   inputEl.addEventListener('paste', handleInputChange);
+  inputEl.addEventListener('input', handleInputChange);
 }
 
 function handleInputChange() {
