@@ -26,11 +26,17 @@ input {
 </style>
 <input autofocus placeholder="beans">
 <div id="flag">
-  <div style="background: #fff"></div><div style="background: #ef7627"></div><div style="background: #b55690"></div><div style="background: #a30262"></div><div style="background: #ff9a56"></div>
+  <div style="background: #ffffff"></div>
+  <div style="background: #ef7627"></div>
+  <div style="background: #b55690"></div>
+  <div style="background: #a30262"></div>
+  <div style="background: #ff9a56"></div>
 </div>
 <script>
 'use strict';
+// If JS is enabled, blank out the flag to prevent flickering
 document.getElementById('flag').innerHTML = '';
+document.querySelector('input').placeholder = '';
 </script>
 <script src="./words.js"></script>
 <script src="./main.js"></script>
