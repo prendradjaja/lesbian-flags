@@ -17,7 +17,13 @@ const inputEl = $('input');
 let lastWord = '';
 
 function main() {
-  useRandomWord();
+  let word = getWordParam();
+  if (word) {
+    renderFlag(toIndices(word));
+    inputEl.placeholder = word;
+  } else {
+    useRandomWord();
+  }
 
   inputEl.addEventListener('keydown', handleInputChange);
   inputEl.addEventListener('paste', handleInputChange);
@@ -58,6 +64,16 @@ function toIndices(word) {
       .map(letter => Array.from('lesbian').indexOf(letter))
       .filter(index => index !== -1)
   );
+}
+
+function getWordParam() {
+  if (!window.location.hash) {
+    return undefined;
+  }
+
+  const paramsString = window.location.hash.replace('#', '');
+  const params = new URLSearchParams(paramsString);
+  return params.get('w');
 }
 
 function useRandomWord() {
