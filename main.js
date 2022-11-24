@@ -14,6 +14,8 @@ const colors = [
 
 const inputEl = $('input');
 
+let lastWord = '';
+
 function main() {
   useRandomWord();
 
@@ -25,6 +27,13 @@ function main() {
 function handleInputChange() {
   setTimeout(() => {
     const word = inputEl.value;
+
+    if (word === lastWord) {
+      return;
+    }
+
+    lastWord = word;
+
     const indices = toIndices(word);
 
     if (indices.length) {
