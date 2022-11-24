@@ -1,7 +1,7 @@
 'use strict';
 
 const words = [
-'abba',
+'ABBA',
 'abelian',
 'abseil',
 'abseils',
