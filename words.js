@@ -4,6 +4,8 @@ const words = [
   'ananas',
   'ant',
   'ants',
+  'naan',
+  'nananana',
   'nanna',
   'ran',
   'rant',
