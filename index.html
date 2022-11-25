@@ -17,29 +17,75 @@ input {
   padding: 0.25em;
 }
 
-#flag {
-  width: calc(210vmin * 0.4);
+/* #flag { */
+/*   width: calc(210vmin * 0.4); */
+/*   margin: 50px auto 0; */
+/* } */
+/*  */
+/* #flag > div { */
+/*   height: calc(20vmin * 0.4); */
+/* } */
+
+#bi-flag {
+  width: calc(150vmin * 0.5);
   margin: 50px auto 0;
 }
 
-#flag > div {
-  height: calc(20vmin * 0.4);
+#bi-flag > div:nth-child(1) { height: calc(36vmin * 0.5); }
+#bi-flag > div:nth-child(2) { height: calc(18vmin * 0.5); }
+#bi-flag > div:nth-child(3) { height: calc(36vmin * 0.5); }
+
+#swatches {
+  margin-top: 50px;
+  width: 100%;
+  height: 10vmin;
+  display: flex;
+}
+#swatches > div {
+  flex: 1 1 auto;
 }
 </style>
-<input autofocus placeholder="ananas">
-<div id="flag">
-  <div style="background: white"></div>
-  <div style="background: #F5A9B8"></div>
-  <div style="background: white"></div>
-  <div style="background: #F5A9B8"></div>
-  <div style="background: white"></div>
-  <div style="background: #5BCEFA"></div>
+
+<div id="bi-flag">
+  <div style=""></div>
+  <div style="background: yellow"></div>
+  <div style="background: green"></div>
 </div>
-<script>
-'use strict';
-// If JS is enabled, blank out the flag to prevent flickering
-document.getElementById('flag').innerHTML = '';
-document.querySelector('input').placeholder = '';
-</script>
+
+<div id="swatches">
+  <div style="background: red"></div>
+  <div style="background: yellow"></div>
+  <div style="background: green"></div>
+  <div style="background: red"></div>
+  <div style="background: yellow"></div>
+  <div style="background: green"></div>
+  <div style="background: red"></div>
+  <div style="background: yellow"></div>
+  <div style="background: green"></div>
+  <div style="background: red"></div>
+  <div style="background: yellow"></div>
+  <div style="background: green"></div>
+  <div style="background: red"></div>
+  <div style="background: yellow"></div>
+  <div style="background: green"></div>
+</div>
+
+<!-- <input autofocus placeholder="ananas"> -->
+<!-- <div id="flag"> -->
+<!--   <div style="background: white"></div> -->
+<!--   <div style="background: #F5A9B8"></div> -->
+<!--   <div style="background: white"></div> -->
+<!--   <div style="background: #F5A9B8"></div> -->
+<!--   <div style="background: white"></div> -->
+<!--   <div style="background: #5BCEFA"></div> -->
+<!-- </div> -->
+
+<!-- <script> -->
+<!-- 'use strict'; -->
+<!-- // If JS is enabled, blank out the flag to prevent flickering -->
+<!-- document.getElementById('flag').innerHTML = ''; -->
+<!-- document.querySelector('input').placeholder = ''; -->
+<!-- </script> -->
+
 <script src="./words.js"></script>
 <script src="./main.js"></script>
