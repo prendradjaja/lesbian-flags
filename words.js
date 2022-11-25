@@ -18,7 +18,6 @@ const words = [
   'chi',
   'chic',
   'chief',
-  'cig',
   'def',
   'deified',
   'dice',
