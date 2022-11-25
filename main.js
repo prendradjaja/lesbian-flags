@@ -54,6 +54,8 @@ function makeQuadraticInterpolator(y_1, y_2, y_3) {
   const x_1 = 0;
   const x_2 = 0.5;
   const x_3 = 1;
+
+  // https://stackoverflow.com/a/16896810/1945088
   const a = y_1/((x_1-x_2)*(x_1-x_3)) + y_2/((x_2-x_1)*(x_2-x_3)) + y_3/((x_3-x_1)*(x_3-x_2))
 
   const b = -y_1*(x_2+x_3)/((x_1-x_2)*(x_1-x_3))
