@@ -1,4 +1,4 @@
-<meta property="og:image" content="https://lesbian-flags.netlify.app/og-image.png"/>
+<!-- TODO Open Graph image -->
 
 <style>
 body {
@@ -18,21 +18,18 @@ input {
 }
 
 #flag {
-  width: calc(210vmin * 0.4);
+  width: calc(150vmin * 0.5);
   margin: 50px auto 0;
 }
 
-#flag > div {
-  height: calc(20vmin * 0.4);
-}
+#flag > div        { height: calc(18vmin * 0.5); }
+#flag > div.double { height: calc(36vmin * 0.5); }
 </style>
-<input autofocus placeholder="beans">
+<input autofocus placeholder="bi">
 <div id="flag">
-  <div style="background: #ffffff"></div>
-  <div style="background: #ef7627"></div>
-  <div style="background: #b55690"></div>
-  <div style="background: #a30262"></div>
-  <div style="background: #ff9a56"></div>
+  <div style="background: hsl(328, 100%, 41%)" class="double"></div>
+  <div style="background: hsl(301, 37%, 43%)"></div>
+  <div style="background: hsl(221, 100%, 31%)" class="double"></div>
 </div>
 <script>
 'use strict';
@@ -41,4 +38,5 @@ document.getElementById('flag').innerHTML = '';
 document.querySelector('input').placeholder = '';
 </script>
 <script src="./words.js"></script>
+<script src="./bi-colors.js"></script>
 <script src="./main.js"></script>

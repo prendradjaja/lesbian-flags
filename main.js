@@ -2,16 +2,6 @@
 
 const $ = s => document.querySelector(s);
 
-const colors = [
-  '#d52d00',
-  '#ef7627',
-  '#ff9a56',
-  '#ffffff',
-  '#d162a4',
-  '#b55690',
-  '#a30262',
-];
-
 const inputEl = $('input');
 
 let lastWord = '';
@@ -52,18 +42,35 @@ function handleInputChange() {
 
 function renderFlag(indices) {
   let html = '';
-  for (let index of indices) {
-    html += `<div style="background: ${colors[index]}"></div>`;
+  for (let [i, index] of indices.entries()) {
+    const isEdge = i === 0 || i === indices.length - 1;
+    html += `
+      <div
+        style="background: ${colors[index]}"
+        class="${isEdge ? 'double' : ''}"
+      ></div>
+    `;
   }
   $('#flag').innerHTML = html;
 }
 
 function toIndices(word) {
-  return (
+  const indices = (
     Array.from(word.toLowerCase())
-      .map(letter => Array.from('lesbian').indexOf(letter))
+      .map(letter => Array.from('bcdefghi').indexOf(letter))
       .filter(index => index !== -1)
+      .map(index => index * 2)
   );
+
+  if (indices.length === 2) {
+    return [
+      indices[0],
+      (indices[0] + indices[1]) / 2,
+      indices[1],
+    ];
+  }
+
+  return indices;
 }
 
 function getWordParam() {
